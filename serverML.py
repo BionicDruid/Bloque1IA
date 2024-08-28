@@ -1,7 +1,7 @@
 #Python Libraries
 from flask import Flask, request, jsonify, render_template
 import numpy as np
-import joblib
+import joblib # type: ignore
 
 #Files management
 import os
@@ -31,4 +31,4 @@ def predictjson():
     return jsonify({'prediction:': str(result[0])})
 
 if __name__ == '__main__':
-    server.run (debug=False, host='0.0.0.0',port=8080)
+    server.run(debug=False, host='0.0.0.0',port=8080)
